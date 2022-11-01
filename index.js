@@ -64,17 +64,7 @@ $(document).ready(function () {
         deleteTask($(this).data('id'));
     });
 
-    $.ajax({
-        type: 'PUT',
-        url: 'https://fewd-todolist-api.onrender.com/tasks/4/mark_complete?api_key=38',
-        dataType: 'json',
-        success: function (response, textStatus) {
-            console.log(response);
-        },
-        error: function (request, textStatus, errorMessage) {
-            console.log(errorMessage);
-        }
-    });
+
 
     var markTaskComplete = function (id) {
         $.ajax({
@@ -99,7 +89,7 @@ $(document).ready(function () {
     var markTaskActive = function (id) {
         $.ajax({
             type: 'PUT',
-            url: 'https://fewd-todolist-api.onrender.com/tasks/' + id + '/mark_active?api_key=2',
+            url: 'https://fewd-todolist-api.onrender.com/tasks/' + id + '/mark_active?api_key=38',
             dataType: 'json',
             success: function (response, textStatus) {
                 getAndDisplayAllTasks();
