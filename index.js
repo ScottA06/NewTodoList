@@ -79,7 +79,7 @@ $(document).ready(function () {
     var markTaskComplete = function (id) {
         $.ajax({
             type: 'put',
-            url: 'https://fewd-todolist-api.onrender.com/tasks' + id + '/mark_complete?api_key=38',
+            url: 'https://fewd-todolist-api.onrender.com/tasks/' + id + '/mark_complete?api_key=38',
             dataType: 'json',
             success: function (response, textStatus) {
                 getAndDisplayAllTasks();
